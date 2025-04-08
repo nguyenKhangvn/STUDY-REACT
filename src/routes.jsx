@@ -6,6 +6,12 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import ProductPage from "./pages/products";
 import Home from "./components/home";
+import OrderPage from "./pages/order";
+import LayoutAdmin from "./pages/admin";
+import ManageUserPage from "./pages/admin/user";
+import ManageProductPage from "./pages/admin/product";
+import AdminOrderPage from "./pages/admin/order";
+import AdminPage from "./pages/admin";
 
 const Layout = () => {
   return (
@@ -30,7 +36,49 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <ProductPage />,
+      },
+      {
+        path: "order",
+        element: <OrderPage />,
       }
+    ],
+  },
+  {
+    path: "/admin",
+    element: <LayoutAdmin />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true, 
+        element:
+          
+            <AdminPage />
+          
+      },
+      {
+        path: "user",
+        element:
+          
+            <ManageUserPage />
+          
+        ,
+      },
+      {
+        path: "product",
+        element:
+          
+            <ManageProductPage />
+          
+        ,
+      },
+      {
+        path: "order",
+        element:
+          
+            <AdminOrderPage />
+          
+        ,
+      },
     ],
   },
   {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/stocks';
+const API_URL = 'http://localhost:3005/stocks';
 
 const stockService = {
   getStocks: () => axios.get(API_URL),

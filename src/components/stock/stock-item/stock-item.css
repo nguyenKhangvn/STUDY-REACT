@@ -1,0 +1,92 @@
+.stock-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.stock-item {
+  width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info h3 {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.info p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.price {
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.actions {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.favorite-action {
+  margin-bottom: 8px;
+}
+
+.favorite-action button,
+.other-actions button {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-action button:hover,
+.other-actions button:hover {
+  background: linear-gradient(135deg, #ff6584, #ff4f70);
+  transform: scale(1.05);
+}
+
+.favorite-action button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.other-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.other-actions button {
+  flex: 1;
+}

@@ -55,11 +55,11 @@
       "favorite": true
     },
     {
-      "id": 1744614804514,
-      "name": "loadStockFromServer Worked",
-      "code": "VNM",
-      "price": 80000,
-      "previousPrice": 80000,
+      "id": 1744619669558,
+      "name": "loocj",
+      "code": "ABC",
+      "price": 123,
+      "previousPrice": 123,
       "exchange": "HOSE",
       "favorite": false
     }

@@ -56,3 +56,24 @@
   text-align: center;
   box-sizing: border-box;
 }
+
+.stock-search {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.stock-search input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.stock-search input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 5px rgba(24, 144, 255, 0.5);
+}

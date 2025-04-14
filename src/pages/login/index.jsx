@@ -22,7 +22,11 @@ const LoginPage = () => {
       if (response.data.length > 0) {
         console.log("Đăng nhập thành công!");
         setError(null);
-        navigate("stock-list");
+
+        const user = response.data[0];
+        localStorage.setItem("user", JSON.stringify(user)); // Lưu thông tin người dùng vào localStorage
+
+        navigate("/stock-list");
       } else {
         setError("Sai tài khoản hoặc mật khẩu.");
       }

@@ -1,60 +1,46 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": "u001",
       "username": "admin",
-      "password": "123"
+      "password": "admin123",
+      "role": 1
     },
     {
-      "id": "2",
-      "username": "khang",
-      "password": "123"
+      "id": "u002",
+      "username": "user1",
+      "password": "user123",
+      "role": 2
     },
     {
-      "id": "52eb",
-      "username": "khang",
-      "password": "123"
+      "id": "u003",
+      "username": "user2",
+      "password": "user456",
+      "role": 2
     },
     {
-      "id": "36e0",
-      "username": "khang",
-      "password": "123"
+      "id": "u003",
+      "username": "khangadmin",
+      "password": "admin123",
+      "role": 1
     },
     {
-      "id": "348b",
-      "username": "khang",
-      "password": "123"
+      "id": "u004",
+      "username": "khanguser",
+      "password": "user123",
+      "role": 2
     },
     {
-      "id": "dffc",
-      "username": "khang",
-      "password": "123"
-    },
-    {
-      "id": "9b44",
-      "username": "han",
-      "password": "1"
-    },
-    {
-      "id": "34b2",
-      "username": "han",
-      "password": "1"
-    },
-    {
-      "id": "b2df",
-      "username": "loc",
-      "password": "1"
-    },
-    {
-      "id": "330c",
-      "username": "khang",
-      "password": "123"
+      "id": "b523",
+      "username": "khang123",
+      "password": "admin123",
+      "role": 1
     }
   ],
   "stocks": [
     {
       "id": "z789",
-      "name": "Tesla hehehe",
+      "name": "Tesla",
       "code": "TSLA",
       "price": 950,
       "previousPrice": 940,
@@ -80,15 +66,6 @@
       "favorite": false
     },
     {
-      "id": "z789",
-      "name": "Tesla",
-      "code": "TSLA",
-      "price": 950,
-      "previousPrice": 940,
-      "exchange": "NASDAQ",
-      "favorite": true
-    },
-    {
       "id": "a111",
       "name": "FPT",
       "code": "FPT",
@@ -108,12 +85,12 @@
     },
     {
       "id": "1744614804514",
-      "name": "loadStockFromServer Worked",
+      "name": "loadStockFromServer",
       "code": "VNM",
       "price": 80000,
       "previousPrice": 80000,
       "exchange": "HOSE",
-      "favorite": false
+      "favorite": true
     }
   ]
 }

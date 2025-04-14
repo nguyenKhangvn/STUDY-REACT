@@ -8,12 +8,12 @@ const stockService = {
   deleteStock: (id) => axios.delete(`${API_URL}/${id}`),
   updateStock: (stock) => axios.put(`${API_URL}/${stock.id}`, stock),
   searchStocks: (keyword) =>
-    axios.get(API_URL).then(res =>
-      res.data.filter(stock =>
+    axios.get(API_URL).then(res => ({
+      data: res.data.filter(stock =>
         stock.name.toLowerCase().includes(keyword.toLowerCase()) ||
         stock.code.toLowerCase().includes(keyword.toLowerCase())
       )
-    ),
+    })),
 };
 
 export default stockService;

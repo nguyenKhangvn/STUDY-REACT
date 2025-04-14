@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { Form, Input, Button, Typography, Alert } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
+const { Title } = Typography;
 
 const RegisterPage = () => {
 
@@ -11,7 +14,7 @@ const RegisterPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post("http://localhost:3000/users", {
+          const response = await axios.post("http://localhost:3001/users", {
               username,
               password,
           });

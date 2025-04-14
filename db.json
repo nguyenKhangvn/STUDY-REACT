@@ -64,7 +64,7 @@
     {
       "id": "x123",
       "name": "Microsoft",
-      "code": "MSFT",
+      "code": "MSFTasd",
       "price": 310,
       "previousPrice": 305,
       "exchange": "NASDAQ",
@@ -107,7 +107,7 @@
       "favorite": true
     },
     {
-      "id": 1744614804514,
+      "id": "1744614804514",
       "name": "loadStockFromServer Worked",
       "code": "VNM",
       "price": 80000,

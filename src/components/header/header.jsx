@@ -23,15 +23,32 @@ const Header = ({ toggleSidebar, user, logout }) => {
           </ul>
 
           <ul className="nav-links">
-            <li><Link to="/stock-list">Stock List</Link></li>
-            {true && (
-              <li><button onClick={() => setShowCreateDialog(true)}>Create Stock</button></li>
+            <li>
+              <Link to="/stock-list">Stock List</Link>
+            </li>
+            <li>
+              <button
+                className="nav-button"
+                onClick={() => setShowCreateDialog(true)}
+              >
+                Create Stock
+              </button>
+            </li>
+            {!user && (
+              <>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+                <li>
+                  <Link to="/register">Register</Link>
+                </li>
+              </>
             )}
-            {!user && <>
-              <li><Link to="/login">Login</Link></li>
-              <li><Link to="/register">Register</Link></li>
-            </>}
-            {user && <li><button onClick={logout}>Logout ({user.name})</button></li>}
+            {user && (
+              <li>
+                <button onClick={logout}>Logout ({user.name})</button>
+              </li>
+            )}
           </ul>
         </nav>
       </div>

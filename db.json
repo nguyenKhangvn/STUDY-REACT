@@ -35,6 +35,12 @@
       "username": "khang123",
       "password": "admin123",
       "role": 1
+    },
+    {
+      "id": "1c8d",
+      "username": "khang",
+      "password": "123",
+      "role": 2
     }
   ],
   "stocks": [
@@ -63,7 +69,7 @@
       "price": 2800,
       "previousPrice": 2750,
       "exchange": "NASDAQ",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "a111",

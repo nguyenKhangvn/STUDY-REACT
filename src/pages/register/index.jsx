@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form, Input, Button, Typography, Alert, Select } from "antd";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../../services/user-service"; // import service
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -13,16 +13,12 @@ const RegisterPage = () => {
   const handleRegister = async (values) => {
     const { username, password, role } = values;
     try {
-      await axios.post("http://localhost:3005/users", {
-        username,
-        password,
-        role,
-      });
+      await registerUser(username, password, role);
       alert("Đăng ký thành công!");
       setError(null);
       navigate("/login");
     } catch (err) {
-      setError("Lỗi khi gọi API.");
+      setError(err.message);
       console.error(err);
     }
   };
@@ -55,9 +51,7 @@ const RegisterPage = () => {
           <Form.Item
             label="Tên đăng nhập"
             name="username"
-            rules={[
-              { required: true, message: "Vui lòng nhập tên đăng nhập!" },
-            ]}
+            rules={[{ required: true, message: "Vui lòng nhập tên đăng nhập!" }]}
           >
             <Input placeholder="Nhập tên đăng nhập" />
           </Form.Item>

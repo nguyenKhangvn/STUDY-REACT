@@ -1,37 +1,28 @@
 import { useState } from "react";
 import { Form, Input, Button, Typography, Alert } from "antd";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../../services/user-service"; // import service
 
 const { Title } = Typography;
 
-const LoginPage = () => {
+const LoginPage = ({ setUser }) => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleLogin = async (values) => {
     const { username, password } = values;
     try {
-      const response = await axios.get("http://localhost:3005/users", {
-        params: {
-          username,
-          password,
-        },
-      });
-
-      if (response.data.length > 0) {
+      const data = await loginUser(username, password);
+      if (data.length > 0) {
         console.log("Đăng nhập thành công!");
         setError(null);
-
-        const user = response.data[0];
-        localStorage.setItem("user", JSON.stringify(user)); // Lưu thông tin người dùng vào localStorage
-
-        navigate("/stock-list");
+        setUser(data[0]);
+        navigate("../stock-list");
       } else {
         setError("Sai tài khoản hoặc mật khẩu.");
       }
     } catch (err) {
-      setError("Lỗi khi gọi API.");
+      setError(err.message);
       console.error(err);
     }
   };

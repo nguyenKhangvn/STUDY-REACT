@@ -7,40 +7,34 @@ import Footer from "./components/footer";
 import Home from "./components/home";
 import StockList from "./components/stock/stock-list/stock-list";
 
-const Layout = () => {
-  return (
-    <div>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
-  );
-};
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "stock-list",
-        element: <StockList />,
-      }
-    ],
-  },
-  {
-    path: "/login",
-    element: <LoginPage />,
-  },
-  {
-    path: "/register",
-    element: <RegisterPage />,
-  },
-]);
+const Layout = ({ user, logout }) => (
+  <>
+    <Header user={user} logout={logout} />
+    <Outlet />
+    <Footer />
+  </>
+);
 
-export default router;
+const createRouter = ({ user, setUser, logout }) =>
+  createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout user={user} logout={logout} />,
+      errorElement: <ErrorPage />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "stock-list", element: <StockList /> },
+      ],
+    },
+    {
+      path: "/login",
+      element: <LoginPage setUser={setUser} />,
+    },
+    {
+      path: "/register",
+      element: <RegisterPage />,
+    },
+  ]);
+
+export default createRouter;

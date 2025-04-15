@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import stockService from "../../../service/stock-service";
+import stockService from "../../../services/stock-service";
 import StockItem from "../stock-item/stock-item";
 import EditStockForm from "../edit-stock/edit-stock";
 import StockDetailDialog from "../stock-detail/stock-detail";

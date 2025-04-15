@@ -17,7 +17,9 @@ const LoginPage = ({ setUser }) => {
         console.log("Đăng nhập thành công!");
         setError(null);
         setUser(data[0]);
-        navigate("../stock-list");
+        const user = data[0];
+        localStorage.setItem("user", JSON.stringify(user)); // Lưu thông tin người dùng vào localStorage
+        navigate("/stock-list");
       } else {
         setError("Sai tài khoản hoặc mật khẩu.");
       }
@@ -54,7 +56,9 @@ const LoginPage = ({ setUser }) => {
           <Form.Item
             label="Tên đăng nhập"
             name="username"
-            rules={[{ required: true, message: "Vui lòng nhập tên đăng nhập!" }]}
+            rules={[
+              { required: true, message: "Vui lòng nhập tên đăng nhập!" },
+            ]}
           >
             <Input placeholder="Nhập tên đăng nhập" />
           </Form.Item>

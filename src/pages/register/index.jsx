@@ -6,6 +6,8 @@ import { registerUser } from "../../services/user-service"; // import service
 const { Title } = Typography;
 
 const RegisterPage = () => {
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleRegister = async (values) => {
     const { username, password, role } = values;
@@ -48,7 +50,9 @@ const RegisterPage = () => {
           <Form.Item
             label="Tên đăng nhập"
             name="username"
-            rules={[{ required: true, message: "Vui lòng nhập tên đăng nhập!" }]}
+            rules={[
+              { required: true, message: "Vui lòng nhập tên đăng nhập!" },
+            ]}
           >
             <Input placeholder="Nhập tên đăng nhập" />
           </Form.Item>
@@ -98,7 +102,7 @@ const RegisterPage = () => {
           </a>
         </p>
       </div>
-    );
+    </div>
+  );
 };
-
 export default RegisterPage;

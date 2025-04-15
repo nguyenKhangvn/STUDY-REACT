@@ -1,11 +1,25 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import CreateStockDialog from "../stock/create-stock/create-stock";
 import "./Header.css";
 
-const Header = ({ toggleSidebar, user, logout }) => {
+const Header = ({ toggleSidebar }) => {
+  const [user, setUser] = useState(null);
   const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/login");
+  };
   return (
     <div className="header-container">
       <div className="header-content">
@@ -26,14 +40,18 @@ const Header = ({ toggleSidebar, user, logout }) => {
             <li>
               <Link to="/stock-list">Stock List</Link>
             </li>
-            <li>
-              <button
-                className="nav-button"
-                onClick={() => setShowCreateDialog(true)}
-              >
-                Create Stock
-              </button>
-            </li>
+            {user && user.role === 1 && (
+              <>
+                <li>
+                  <button
+                    className="nav-button"
+                    onClick={() => setShowCreateDialog(true)}
+                  >
+                    Create Stock
+                  </button>
+                </li>
+              </>
+            )}
             {!user && (
               <>
                 <li>
@@ -46,7 +64,9 @@ const Header = ({ toggleSidebar, user, logout }) => {
             )}
             {user && (
               <li>
-                <button onClick={logout}>Logout ({user.name})</button>
+                <button className="nav-button" onClick={handleLogout}>
+                  Logout ({user.username})
+                </button>
               </li>
             )}
           </ul>

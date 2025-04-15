@@ -1,34 +1,29 @@
 {
   "users": [
     {
-      "id": "u001",
+      "id": "1",
       "username": "admin",
-      "password": "admin123",
-      "role": 1
+      "password": "123"
     },
     {
-      "id": "u002",
-      "username": "user1",
-      "password": "user123",
-      "role": 2
+      "id": "2",
+      "username": "khang",
+      "password": "123"
     },
     {
-      "id": "u003",
-      "username": "user2",
-      "password": "user456",
-      "role": 2
+      "id": "52eb",
+      "username": "khang",
+      "password": "123"
     },
     {
-      "id": "u003",
-      "username": "khangadmin",
-      "password": "admin123",
-      "role": 1
+      "id": "36e0",
+      "username": "khang",
+      "password": "123"
     },
     {
-      "id": "u004",
-      "username": "khanguser",
-      "password": "user123",
-      "role": 2
+      "id": "348b",
+      "username": "khang",
+      "password": "123"
     },
     {
       "id": "b523",
@@ -46,7 +41,7 @@
   "stocks": [
     {
       "id": "z789",
-      "name": "Tesla",
+      "name": "Tesla hehehe",
       "code": "TSLA",
       "price": 950,
       "previousPrice": 940,
@@ -72,6 +67,15 @@
       "favorite": true
     },
     {
+      "id": "z789",
+      "name": "Tesla",
+      "code": "TSLA",
+      "price": 950,
+      "previousPrice": 940,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
       "id": "a111",
       "name": "FPT",
       "code": "FPT",
@@ -91,12 +95,12 @@
     },
     {
       "id": "1744614804514",
-      "name": "loadStockFromServer",
+      "name": "loadStockFromServer Worked",
       "code": "VNM",
       "price": 80000,
       "previousPrice": 80000,
       "exchange": "HOSE",
-      "favorite": true
+      "favorite": false
     }
   ]
 }

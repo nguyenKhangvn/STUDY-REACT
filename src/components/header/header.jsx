@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CreateStockDialog from "../stock/create-stock/create-stock";
 import "./Header.css";
 
-const Header = ({ toggleSidebar }) => {
-  const [user, setUser] = useState(null);
+const Header = ({ toggleSidebar, user, logout }) => {
   const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    setUser(null);
-    navigate("/login");
-  };
 
   return (
     <div className="header-container">
@@ -41,18 +26,14 @@ const Header = ({ toggleSidebar }) => {
             <li>
               <Link to="/stock-list">Stock List</Link>
             </li>
-            {user?.role === 1 && ( // Admin
-              <>
-                <li>
-                  <button
-                    className="nav-button"
-                    onClick={() => setShowCreateDialog(true)}
-                  >
-                    Create Stock
-                  </button>
-                </li>
-              </>
-            )}
+            <li>
+              <button
+                className="nav-button"
+                onClick={() => setShowCreateDialog(true)}
+              >
+                Create Stock
+              </button>
+            </li>
             {!user && (
               <>
                 <li>
@@ -65,9 +46,7 @@ const Header = ({ toggleSidebar }) => {
             )}
             {user && (
               <li>
-                <button className="nav-button" onClick={handleLogout}>
-                  Logout ({user.username})
-                </button>
+                <button onClick={logout}>Logout ({user.name})</button>
               </li>
             )}
           </ul>

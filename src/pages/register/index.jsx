@@ -4,11 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../services/user-service"; // import service
 
 const { Title } = Typography;
-const { Option } = Select;
 
 const RegisterPage = () => {
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
   const handleRegister = async (values) => {
     const { username, password, role } = values;
@@ -101,8 +98,7 @@ const RegisterPage = () => {
           </a>
         </p>
       </div>
-    </div>
-  );
+    );
 };
 
 export default RegisterPage;

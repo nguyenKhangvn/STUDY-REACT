@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "id": "u001",
+      "username": "admin",
+      "password": "admin123",
+      "role": 1
+    },
+    {
+      "id": "u002",
+      "username": "user1",
+      "password": "user123",
+      "role": 2
+    },
+    {
+      "id": "u003",
+      "username": "user2",
+      "password": "user456",
+      "role": 2
+    },
+    {
+      "id": "u003",
+      "username": "khangadmin",
+      "password": "admin123",
+      "role": 1
+    },
+    {
+      "id": "u004",
+      "username": "khanguser",
+      "password": "user123",
+      "role": 2
+    },
+    {
+      "id": "b523",
+      "username": "khang123",
+      "password": "admin123",
+      "role": 1
+    },
+    {
+      "id": "1c8d",
+      "username": "khang",
+      "password": "123",
+      "role": 2
+    }
+  ],
+  "stocks": [
+    {
+      "id": "z789",
+      "name": "Tesla",
+      "code": "TSLA",
+      "price": 950,
+      "previousPrice": 940,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "x123",
+      "name": "Microsoft",
+      "code": "MSFTasd",
+      "price": 310,
+      "previousPrice": 305,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "y456",
+      "name": "Google",
+      "code": "GOOGL",
+      "price": 2800,
+      "previousPrice": 2750,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "a111",
+      "name": "FPT",
+      "code": "FPT",
+      "price": 95000,
+      "previousPrice": 94000,
+      "exchange": "HOSE",
+      "favorite": false
+    },
+    {
+      "id": "b222",
+      "name": "VNDirect",
+      "code": "VND",
+      "price": 24000,
+      "previousPrice": 23500,
+      "exchange": "HOSE",
+      "favorite": true
+    },
+    {
+      "id": "1744614804514",
+      "name": "loadStockFromServer",
+      "code": "VNM",
+      "price": 80000,
+      "previousPrice": 80000,
+      "exchange": "HOSE",
+      "favorite": true
+    }
+  ]
+}

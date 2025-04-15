@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Overlay giống edit-stock */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Dialog giống edit-stock */
+.wrapper {
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tiêu đề */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Form */
+form {
+  width: 100%;
+}
+
+/* Form group */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.field input,
+.field select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.field label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Checkbox */
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-field input {
+  margin-right: 10px;
+}
+
+.checkbox-field label {
+  font-size: 15px;
+  color: #333;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-size: 12px;
+  margin: -10px 0 10px 0;
+}
+
+/* Button style */
+.field input[type="submit"],
+.field button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.field input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.field button {
+  background-color: #f44336;
+  color: white;
+  margin-top: 5px;
+}
+
+.field button:hover,
+.field input[type="submit"]:hover {
+  opacity: 0.9;
+}

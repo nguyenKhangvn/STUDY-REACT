@@ -1,0 +1,19 @@
+import axios from 'axios';
+
+const API_URL = 'http://localhost:3005/stocks';
+
+const stockService = {
+  getStocks: () => axios.get(API_URL),
+  addStock: (stock) => axios.post(API_URL, stock),
+  deleteStock: (id) => axios.delete(`${API_URL}/${id}`),
+  updateStock: (stock) => axios.put(`${API_URL}/${stock.id}`, stock),
+  searchStocks: (keyword) =>
+    axios.get(API_URL).then(res => ({
+      data: res.data.filter(stock =>
+        stock.name.toLowerCase().includes(keyword.toLowerCase()) ||
+        stock.code.toLowerCase().includes(keyword.toLowerCase())
+      )
+    })),
+};
+
+export default stockService;

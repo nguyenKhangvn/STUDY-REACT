@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import CreateStockDialog from "../stock/create-stock/create-stock";
 import "./Header.css";
 
-const Header = ({ toggleSidebar }) => {
+const Header = () => {
   const [user, setUser] = useState(null);
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Header = ({ toggleSidebar }) => {
         <nav className="nav-bar">
           <ul className="sidebar-toggle">
             <li>
-              <button onClick={toggleSidebar}>
+              <button>
                 <i className="material-icons">menu</i>
               </button>
             </li>
@@ -37,6 +37,9 @@ const Header = ({ toggleSidebar }) => {
           </ul>
 
           <ul className="nav-links">
+            <li>
+              <Link to="/stock-list-view">List View</Link>
+            </li>
             <li>
               <Link to="/stock-list">Stock List</Link>
             </li>

@@ -5,6 +5,7 @@ const API_URL = "http://localhost:3005/users";
 
 export const loginUser = async (username, password) => {
   try {
+    debugger;
     const response = await axios.get(API_URL, {
       params: { username, password },
     });

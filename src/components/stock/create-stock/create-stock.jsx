@@ -38,7 +38,7 @@ const CreateStockDialog = ({ onClose }) => {
     setErrors(errs);
     if (Object.keys(errs).length === 0) {
       const newStock = {
-        id: Date.now(),
+        id: Date.now().toString(),
         name: form.name,
         code: form.code,
         price: parseFloat(form.price),
@@ -48,7 +48,7 @@ const CreateStockDialog = ({ onClose }) => {
       };
 
       try {
-        const response = await fetch("http://localhost:3000/stocks", {
+        const response = await fetch("http://localhost:3005/stocks", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newStock),
@@ -155,11 +155,11 @@ const CreateStockDialog = ({ onClose }) => {
               Load Stock From Server
             </button>
           </div>
-          <div className="field">
+          {/* <div className="field">
             <button type="button" onClick={() => setForm(initialForm)}>
               Reset Form
             </button>
-          </div>
+          </div> */}
           <div className="field">
             <button type="button" onClick={onClose}>
               Đóng

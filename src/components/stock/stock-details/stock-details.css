@@ -1,0 +1,43 @@
+/* stock-detail.css */
+
+.stock-detail-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stock-detail-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.stock-detail-container p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #34495e;
+}
+
+.stock-detail-container strong {
+  color: #2980b9;
+}
+.back-button {
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: #7b61ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #5a44d0;
+}

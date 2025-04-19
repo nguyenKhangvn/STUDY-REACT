@@ -6,25 +6,28 @@ import Header from "./components/header/header";
 import Footer from "./components/footer";
 import Home from "./components/home";
 import StockList from "./components/stock/stock-list/stock-list";
+import StockListView from "./components/stock/stock-list-view/stock-list-view";
+import StockDetail from "./components/stock/stock-details/stock-details";
 
-
-const Layout = ({ user, logout }) => (
+const Layout = () => (
   <>
-    <Header user={user} logout={logout} />
+    <Header />
     <Outlet />
     <Footer />
   </>
 );
 
-const createRouter = ({ user, setUser, logout }) =>
+const createRouter = ({ user, setUser }) =>
   createBrowserRouter([
     {
       path: "/",
-      element: <Layout user={user} logout={logout} />,
+      element: <Layout />,
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Home /> },
         { path: "stock-list", element: <StockList /> },
+        { path: "stock-list-view", element: <StockListView /> },
+        { path: "stock-detail/:id", element: <StockDetail /> },
       ],
     },
     {

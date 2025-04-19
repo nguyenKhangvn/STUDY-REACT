@@ -55,7 +55,7 @@ function StockList() {
     if (!keyword) {
       loadStocks();
     } else {
-      stockService.searchStocks(keyword).then((res) => setStocks(res.data));
+      stockService.searchStocks(keyword).then(setStocks);
     }
   };
 

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../services/user-service"; // import service
 
 const { Title } = Typography;
-const { Option } = Select;
 
 const RegisterPage = () => {
   const [error, setError] = useState(null);
@@ -51,7 +50,9 @@ const RegisterPage = () => {
           <Form.Item
             label="Tên đăng nhập"
             name="username"
-            rules={[{ required: true, message: "Vui lòng nhập tên đăng nhập!" }]}
+            rules={[
+              { required: true, message: "Vui lòng nhập tên đăng nhập!" },
+            ]}
           >
             <Input placeholder="Nhập tên đăng nhập" />
           </Form.Item>
@@ -104,5 +105,4 @@ const RegisterPage = () => {
     </div>
   );
 };
-
 export default RegisterPage;

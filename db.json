@@ -1,36 +1,6 @@
 {
   "users": [
     {
-      "id": "u001",
-      "username": "admin",
-      "password": "admin123",
-      "role": 1
-    },
-    {
-      "id": "u002",
-      "username": "user1",
-      "password": "user123",
-      "role": 2
-    },
-    {
-      "id": "u003",
-      "username": "user2",
-      "password": "user456",
-      "role": 2
-    },
-    {
-      "id": "u003",
-      "username": "khangadmin",
-      "password": "admin123",
-      "role": 1
-    },
-    {
-      "id": "u004",
-      "username": "khanguser",
-      "password": "user123",
-      "role": 2
-    },
-    {
       "id": "b523",
       "username": "khang123",
       "password": "admin123",
@@ -41,6 +11,12 @@
       "username": "khang",
       "password": "123",
       "role": 2
+    },
+    {
+      "id": "5e96",
+      "username": "loc",
+      "password": "123",
+      "role": 1
     }
   ],
   "stocks": [
@@ -48,26 +24,8 @@
       "id": "z789",
       "name": "Tesla",
       "code": "TSLA",
-      "price": 950,
-      "previousPrice": 940,
-      "exchange": "NASDAQ",
-      "favorite": true
-    },
-    {
-      "id": "x123",
-      "name": "Microsoft",
-      "code": "MSFTasd",
-      "price": 310,
-      "previousPrice": 305,
-      "exchange": "NASDAQ",
-      "favorite": true
-    },
-    {
-      "id": "y456",
-      "name": "Google",
-      "code": "GOOGL",
-      "price": 2800,
-      "previousPrice": 2750,
+      "price": 100,
+      "previousPrice": 100,
       "exchange": "NASDAQ",
       "favorite": true
     },
@@ -75,7 +33,7 @@
       "id": "a111",
       "name": "FPT",
       "code": "FPT",
-      "price": 95000,
+      "price": 100,
       "previousPrice": 94000,
       "exchange": "HOSE",
       "favorite": false
@@ -90,11 +48,56 @@
       "favorite": true
     },
     {
-      "id": "1744614804514",
-      "name": "loadStockFromServer",
+      "id": "c333",
+      "name": "Vingroup",
+      "code": "VIC",
+      "price": 100000,
+      "previousPrice": 98000,
+      "exchange": "HOSE",
+      "favorite": false
+    },
+    {
+      "id": "d444",
+      "name": "Vinamilk",
       "code": "VNM",
-      "price": 80000,
-      "previousPrice": 80000,
+      "price": 150000,
+      "previousPrice": 148000,
+      "exchange": "HOSE",
+      "favorite": true
+    },
+    {
+      "id": "e555",
+      "name": "Techcombank",
+      "code": "TCB",
+      "price": 20000,
+      "previousPrice": 19800,
+      "exchange": "HOSE",
+      "favorite": false
+    },
+    {
+      "id": "f666",
+      "name": "BIDV",
+      "code": "BID",
+      "price": 50000,
+      "previousPrice": 49000,
+      "exchange": "HOSE",
+      "favorite": true
+    },
+    {
+      "id": "g777",
+      "name": "MBBank",
+      "code": "MBB",
+      "price": 30000,
+      "previousPrice": 29500,
+      "exchange": "HOSE",
+      "favorite": false
+    },
+    {
+      "id": "h888",
+      "name": "Sacombank",
+      "code": "STB",
+      "price": 25000,
+      "previousPrice": 24800,
       "exchange": "HOSE",
       "favorite": true
     }

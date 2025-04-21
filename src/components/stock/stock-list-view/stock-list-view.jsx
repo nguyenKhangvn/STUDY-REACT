@@ -146,7 +146,7 @@ const StockListView = () => {
   };
 
   return (
-    <div>
+    <div className="stock-list-view-container">
       <h2 className="stock-heading">Danh sách cổ phiếu:</h2>
 
       <div className="search">

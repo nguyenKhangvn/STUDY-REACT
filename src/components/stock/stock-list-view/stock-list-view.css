@@ -1,14 +1,13 @@
-/* 🌟 Định dạng chung */
-body {
+.stock-list-view-container {
+  /* 🌟 Định dạng chung */
   font-family: Arial, sans-serif;
   background-color: #f4f7f9;
-  margin: 0;
   padding: 20px;
   margin-top: 75px;
 }
 
 /* 🌟 Tiêu đề */
-.stock-heading {
+.stock-list-view-container .stock-heading {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
@@ -16,10 +15,10 @@ body {
 }
 
 /* 🌟 Ô tìm kiếm */
-.search {
+.stock-list-view-container .search {
   margin-bottom: 20px;
 }
-.input {
+.stock-list-view-container .input {
   width: 300px;
   padding: 8px;
   border: 2px solid #007bff;
@@ -28,7 +27,7 @@ body {
   margin-right: 10px;
 }
 
-button {
+.stock-list-view-container button {
   padding: 8px 15px;
   font-size: 16px;
   border: none;
@@ -37,12 +36,12 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+.stock-list-view-container button:hover {
   opacity: 0.8;
 }
 
 /* 🌟 Bảng hiển thị danh sách cổ phiếu */
-.stock-table {
+.stock-list-view-container .stock-table {
   width: 100%;
   border-collapse: collapse;
   background-color: white;
@@ -51,79 +50,89 @@ button:hover {
   overflow: hidden;
 }
 
-.stock-table thead {
+.stock-list-view-container .stock-table thead {
   background-color: black;
   color: white;
 }
 
-.stock-table th,
-.stock-table td {
+.stock-list-view-container .stock-table th,
+.stock-list-view-container .stock-table td {
   padding: 12px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
-.stock-table tbody tr:hover {
+.stock-list-view-container .stock-table tbody tr:hover {
   background-color: #f1f1f1;
 }
 
 /* 🌟 Các nút hành động */
-.actions {
-  display: flex;
+.stock-list-view-container .actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  margin: 0px;
 }
 
-.btn-view {
+.stock-list-view-container .actions button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.stock-list-view-container .btn-view {
   background-color: #17a2b8;
   color: white;
 }
 
-.btn-edit {
+.stock-list-view-container .btn-edit {
   background-color: #ffc107;
   color: black;
 }
 
-.btn-delete {
+.stock-list-view-container .btn-delete {
   background-color: #dc3545;
   color: white;
 }
 
-.btn-detail {
+.stock-list-view-container .btn-detail {
   background-color: #28a745;
   color: white;
 }
 
-/* 🌟 Chuyển đổi màu giá */
-.positive {
-  color: green;
-  font-weight: bold;
-}
-
-.balance {
-  color: #e5ff00;
-  font-weight: bold;
-}
-
-.negative {
-  color: red;
-  font-weight: bold;
-}
-
-.btn-edit,
-.btn-delete,
-.btn-view,
-.btn-detail {
+.stock-list-view-container .btn-edit,
+.stock-list-view-container .btn-delete,
+.stock-list-view-container .btn-view,
+.stock-list-view-container .btn-detail {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   margin-top: 10px;
 }
 
-.btn-add {
+.stock-list-view-container .btn-add {
   margin-right: 10px;
   background-color: chocolate;
   color: white;
+}
+
+/* 🌟 Chuyển đổi màu giá */
+.stock-list-view-container .positive {
+  color: green;
+  font-weight: bold;
+}
+
+.stock-list-view-container .balance {
+  color: #e5ff00;
+  font-weight: bold;
+}
+
+.stock-list-view-container .negative {
+  color: red;
+  font-weight: bold;
 }
 
 /* ⚡ Animation */
@@ -148,29 +157,7 @@ button:hover {
 }
 
 /* 🌌 Modal backdrop */
-/* 🎞️ Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 🌌 Modal backdrop */
-.modal {
+.stock-list-view-container .modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,7 +172,7 @@ button:hover {
 }
 
 /* 🧊 Modal box */
-.modal-content {
+.stock-list-view-container .modal-content {
   background: linear-gradient(to bottom right, #ffffff, #f4f6ff);
   padding: 24px;
   width: 90%;
@@ -199,7 +186,7 @@ button:hover {
 }
 
 /* ❌ Close button */
-.close {
+.stock-list-view-container .close {
   position: absolute;
   top: 12px;
   right: 16px;
@@ -210,12 +197,12 @@ button:hover {
   transition: color 0.2s ease;
 }
 
-.close:hover {
+.stock-list-view-container .close:hover {
   color: #e74c3c;
 }
 
 /* 📄 Form styling */
-form {
+.stock-list-view-container form {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -223,7 +210,7 @@ form {
 }
 
 /* 🔘 Input fields */
-input {
+.stock-list-view-container input {
   padding: 10px 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -232,13 +219,14 @@ input {
   background: #fdfdff;
 }
 
-input:focus {
+.stock-list-view-container input:focus {
   border-color: #7b61ff;
   outline: none;
   box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.3);
 }
 
-.pagination {
+/* 🌐 Pagination */
+.stock-list-view-container .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,7 +234,7 @@ input:focus {
   gap: 8px;
 }
 
-.pagination-btn {
+.stock-list-view-container .pagination-btn {
   background-color: #f0f0f0;
   color: #333;
   border: 1px solid #ccc;
@@ -256,11 +244,11 @@ input:focus {
   transition: background-color 0.2s ease;
 }
 
-.pagination-btn:hover {
+.stock-list-view-container .pagination-btn:hover {
   background-color: #e0e0e0;
 }
 
-.pagination-btn.active {
+.stock-list-view-container .pagination-btn.active {
   background-color: #343434;
   color: white;
   font-weight: bold;

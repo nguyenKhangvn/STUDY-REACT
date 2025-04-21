@@ -15,7 +15,8 @@ const Header = () => {
     }
   }, []);
 
-  const handleLogout = () => { //arrow function
+  const handleLogout = () => {
+    //arrow function
     localStorage.removeItem("user");
     setUser(null);
     navigate("/login");
@@ -35,6 +36,9 @@ const Header = () => {
           </ul>
 
           <ul className="nav-links">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>
               <Link to="/stock-list-view">List View</Link>
             </li>

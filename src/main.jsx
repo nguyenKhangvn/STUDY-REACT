@@ -9,3 +9,14 @@ createRoot(document.getElementById('root')).render(
     <App />
   </Provider>,
 )
+//Nếu không sử dụng redux: createRoot(document.getElementById('root')).render(<App />);
+
+
+
+//{} : destructuring
+/*
+const element = <h1>Hello, world!</h1>;
+// Chuyển thành:
+const element = React.createElement('h1', null, 'Hello, world!');
+*/
+// ReactDOM.render(element, document.getElementById('root'));

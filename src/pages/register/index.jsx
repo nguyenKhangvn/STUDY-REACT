@@ -1,3 +1,4 @@
+import "./register.css";
 import { useState } from "react";
 import { Form, Input, Button, Typography, Alert, Select } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -23,25 +24,8 @@ const RegisterPage = () => {
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#f0f2f5",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          padding: 32,
-          backgroundColor: "white",
-          borderRadius: 12,
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-          width: "100%",
-          maxWidth: 400,
-        }}
-      >
+    <div className="register-container">
+      <div className="register-box">
         <Title level={2} style={{ textAlign: "center", color: "#1890ff" }}>
           Đăng ký
         </Title>
@@ -72,8 +56,8 @@ const RegisterPage = () => {
             rules={[{ required: true, message: "Vui lòng chọn vai trò!" }]}
           >
             <Select placeholder="Chọn vai trò">
-              <Option value={1}>Admin</Option>
-              <Option value={2}>User</Option>
+              <Select.Option value={1}>Admin</Select.Option>
+              <Select.Option value={2}>User</Select.Option>
             </Select>
           </Form.Item>
 

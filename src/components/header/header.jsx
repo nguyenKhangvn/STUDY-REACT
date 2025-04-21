@@ -15,7 +15,7 @@ const Header = () => {
     }
   }, []);
 
-  const handleLogout = () => {
+  const handleLogout = () => { //arrow function
     localStorage.removeItem("user");
     setUser(null);
     navigate("/login");
@@ -24,13 +24,11 @@ const Header = () => {
     <div className="header-container">
       <div className="header-content">
         <nav className="nav-bar">
-          <ul className="sidebar-toggle">
+          {/* <ul className="sidebar-toggle">
             <li>
-              <button>
-                <i className="material-icons">menu</i>
-              </button>
+              <button> <i className="material-icons">menu</i> }</button>
             </li>
-          </ul>
+          </ul> */}
 
           <ul>
             <h1>Welcome to Stock Market</h1>
@@ -41,7 +39,7 @@ const Header = () => {
               <Link to="/stock-list-view">List View</Link>
             </li>
             <li>
-              <Link to="/stock-list">Stock List</Link>
+              <Link to="/stock-list">Stock Item</Link>
             </li>
             {user && user.role === 1 && (
               <>

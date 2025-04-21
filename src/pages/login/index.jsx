@@ -1,7 +1,8 @@
+import "./login.css";
 import { useState } from "react";
 import { Form, Input, Button, Typography, Alert } from "antd";
 import { useNavigate } from "react-router-dom";
-import { loginUser } from "../../services/user-service"; // import service
+import { loginUser } from "../../services/user-service";
 
 const { Title } = Typography;
 
@@ -30,25 +31,8 @@ const LoginPage = ({ setUser }) => {
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#f0f2f5",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          padding: 32,
-          backgroundColor: "white",
-          borderRadius: 12,
-          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-          width: "100%",
-          maxWidth: 400,
-        }}
-      >
+    <div className="login-container">
+      <div className="login-box">
         <Title level={2} style={{ textAlign: "center", color: "#1890ff" }}>
           Đăng nhập
         </Title>
@@ -88,6 +72,13 @@ const LoginPage = ({ setUser }) => {
             </Button>
           </Form.Item>
         </Form>
+
+        <p style={{ textAlign: "center", marginTop: 16 }}>
+          Chưa có tài khoản?{" "}
+          <a href="/register" style={{ color: "#1890ff" }}>
+            Đăng ký
+          </a>
+        </p>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import "./stock-details.css";
 
 const StockDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate(); // 👈 Thêm hook navigate
+  const navigate = useNavigate();
   const [stock, setStock] = useState(null);
 
   useEffect(() => {
@@ -41,9 +41,8 @@ const StockDetail = () => {
         <strong>Yêu thích:</strong> {stock.favorite ? "Có" : "Không"}
       </p>
 
-      {/* 🔙 Nút quay lại */}
       <button className="back-button" onClick={() => navigate(-1)}>
-        ⬅️ Quay lại
+        Quay lại
       </button>
     </div>
   );

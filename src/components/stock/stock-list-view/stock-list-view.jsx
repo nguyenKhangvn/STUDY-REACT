@@ -13,7 +13,6 @@ const StockListView = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState("");
   const [selectedStock, setSelectedStock] = useState(null);
-  const navigate = useNavigate();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [editStock, setEditStock] = useState({
     name: "",
@@ -21,6 +20,14 @@ const StockListView = () => {
     previousPrice: 0,
     favorite: false,
   });
+
+  const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [stocksPerPage] = useState(5);
+  const indexOfLastStock = currentPage * stocksPerPage;
+  const indexOfFirstStock = indexOfLastStock - stocksPerPage;
+  const currentStocks = stocks.slice(indexOfFirstStock, indexOfLastStock);
+  const totalPages = Math.ceil(stocks.length / stocksPerPage);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -42,11 +49,20 @@ const StockListView = () => {
       );
       setStocks(filteredStocks);
     }
+    setCurrentPage(1);
   }, [codeSearch]);
 
   useEffect(() => {
-    loadStocks();
-  }, [showCreateDialog]);
+    const onStockCreated = () => {
+      loadStocks();
+    };
+
+    window.addEventListener("stockCreated", onStockCreated);
+
+    return () => {
+      window.removeEventListener("stockCreated", onStockCreated);
+    };
+  }, []);
 
   const loadStocks = async () => {
     try {
@@ -72,6 +88,26 @@ const StockListView = () => {
     });
   };
 
+  const getPageNumbers = () => {
+    const maxVisiblePages = 4;
+    const pageNumbers = [];
+
+    let startPage = currentPage;
+    let endPage = startPage + maxVisiblePages - 1;
+
+    // Điều chỉnh nếu endPage vượt quá tổng số trang
+    if (endPage > totalPages) {
+      endPage = totalPages;
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pageNumbers.push(i);
+    }
+
+    return pageNumbers;
+  };
+
   const openModal = (stock, mode) => {
     setSelectedStock(stock);
     setModalMode(mode);
@@ -88,10 +124,6 @@ const StockListView = () => {
 
   const saveStock = () => {
     if (selectedStock) {
-      //   const updated = stocks.map((s) =>
-      //     s.code === selectedStock.code ? { ...selectedStock, ...editStock } : s
-      //   );
-      //   setStocks(updated);
       stockService.updateStock(editStock).then(() => {
         alert("Đã cập nhật cổ phiếu.");
         loadStocks();
@@ -99,11 +131,6 @@ const StockListView = () => {
       closeModal();
     }
   };
-
-  //   const createStock = (newStock) => {
-  //     setStocks([...stocks, newStock]);
-  //     closeModal();
-  //   };
 
   const deleteStock = (stock) => {
     const confirmDelete = window.confirm(
@@ -160,7 +187,7 @@ const StockListView = () => {
           </tr>
         </thead>
         <tbody>
-          {stocks.map((stock) => (
+          {currentStocks.map((stock) => (
             <tr key={stock.code}>
               <td>{stock.code}</td>
               <td>{stock.name}</td>
@@ -217,6 +244,37 @@ const StockListView = () => {
           ))}
         </tbody>
       </table>
+      <div className="pagination">
+        <button
+          className="pagination-btn"
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          &lt;
+        </button>
+
+        {getPageNumbers().map((number) => (
+          <button
+            key={number}
+            className={`pagination-btn ${
+              currentPage === number ? "active" : ""
+            }`}
+            onClick={() => setCurrentPage(number)}
+          >
+            {number}
+          </button>
+        ))}
+
+        <button
+          className="pagination-btn"
+          onClick={() =>
+            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+          }
+          disabled={currentPage === totalPages}
+        >
+          &gt;
+        </button>
+      </div>
 
       {isModalOpen && (
         <div className="modal">

@@ -36,7 +36,7 @@
       "price": 200,
       "previousPrice": 400,
       "exchange": "NASDAQ",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "b456",
@@ -199,8 +199,7 @@
       "previousPrice": 2000,
       "exchange": "NASDAQ",
       "favorite": false
-    }
-    ,
+    },
     {
       "id": "t890",
       "name": "Zoom",
@@ -218,8 +217,7 @@
       "previousPrice": 2200,
       "exchange": "NASDAQ",
       "favorite": false
-    }
-    ,
+    },
     {
       "id": "v456",
       "name": "Atlassian",
@@ -237,8 +235,7 @@
       "previousPrice": 2400,
       "exchange": "NASDAQ",
       "favorite": false
-    }
-    ,
+    },
     {
       "id": "x012",
       "name": "Twilio",
@@ -256,8 +253,7 @@
       "previousPrice": 2600,
       "exchange": "NASDAQ",
       "favorite": false
-    }
-    ,
+    },
     {
       "id": "z678",
       "name": "Snowflake",
@@ -275,8 +271,7 @@
       "previousPrice": 2800,
       "exchange": "NASDAQ",
       "favorite": false
-    }
-    ,
+    },
     {
       "id": "b234",
       "name": "CrowdStrike",
@@ -294,8 +289,7 @@
       "previousPrice": 3000,
       "exchange": "NASDAQ",
       "favorite": false
-    }
-    ,
+    },
     {
       "id": "d890",
       "name": "Zscaler",

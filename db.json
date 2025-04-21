@@ -24,82 +24,295 @@
       "id": "z789",
       "name": "Tesla",
       "code": "TSLA",
-      "price": 100,
+      "price": 200,
       "previousPrice": 100,
       "exchange": "NASDAQ",
       "favorite": true
     },
     {
-      "id": "a111",
-      "name": "FPT",
-      "code": "FPT",
-      "price": 100,
-      "previousPrice": 94000,
-      "exchange": "HOSE",
+      "id": "a123",
+      "name": "Apple",
+      "code": "AAPL",
+      "price": 200,
+      "previousPrice": 400,
+      "exchange": "NASDAQ",
       "favorite": false
     },
     {
-      "id": "b222",
-      "name": "VNDirect",
-      "code": "VND",
-      "price": 24000,
-      "previousPrice": 23500,
-      "exchange": "HOSE",
+      "id": "b456",
+      "name": "Google",
+      "code": "GOOGL",
+      "price": 300,
+      "previousPrice": 300,
+      "exchange": "NASDAQ",
       "favorite": true
     },
     {
-      "id": "c333",
-      "name": "Vingroup",
-      "code": "VIC",
-      "price": 100000,
-      "previousPrice": 98000,
-      "exchange": "HOSE",
+      "id": "c789",
+      "name": "Microsoft",
+      "code": "MSFT",
+      "price": 400,
+      "previousPrice": 400,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "d012",
+      "name": "Amazon",
+      "code": "AMZN",
+      "price": 500,
+      "previousPrice": 500,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "e345",
+      "name": "Facebook",
+      "code": "FB",
+      "price": 600,
+      "previousPrice": 600,
+      "exchange": "NASDAQ",
       "favorite": false
     },
     {
-      "id": "d444",
-      "name": "Vinamilk",
-      "code": "VNM",
-      "price": 150000,
-      "previousPrice": 148000,
-      "exchange": "HOSE",
+      "id": "f678",
+      "name": "Netflix",
+      "code": "NFLX",
+      "price": 700,
+      "previousPrice": 700,
+      "exchange": "NASDAQ",
       "favorite": true
     },
     {
-      "id": "e555",
-      "name": "Techcombank",
-      "code": "TCB",
-      "price": 20000,
-      "previousPrice": 19800,
-      "exchange": "HOSE",
+      "id": "g901",
+      "name": "NVIDIA",
+      "code": "NVDA",
+      "price": 800,
+      "previousPrice": 800,
+      "exchange": "NASDAQ",
       "favorite": false
     },
     {
-      "id": "f666",
-      "name": "BIDV",
-      "code": "BID",
-      "price": 50000,
-      "previousPrice": 49000,
-      "exchange": "HOSE",
+      "id": "h234",
+      "name": "Adobe",
+      "code": "ADBE",
+      "price": 900,
+      "previousPrice": 900,
+      "exchange": "NASDAQ",
       "favorite": true
     },
     {
-      "id": "g777",
-      "name": "MBBank",
-      "code": "MBB",
-      "price": 30000,
-      "previousPrice": 29500,
-      "exchange": "HOSE",
+      "id": "i567",
+      "name": "Salesforce",
+      "code": "CRM",
+      "price": 1000,
+      "previousPrice": 1000,
+      "exchange": "NASDAQ",
       "favorite": false
     },
     {
-      "id": "h888",
-      "name": "Sacombank",
-      "code": "STB",
-      "price": 25000,
-      "previousPrice": 24800,
-      "exchange": "HOSE",
+      "id": "j890",
+      "name": "PayPal",
+      "code": "PYPL",
+      "price": 1100,
+      "previousPrice": 1100,
+      "exchange": "NASDAQ",
       "favorite": true
+    },
+    {
+      "id": "k123",
+      "name": "Twitter",
+      "code": "TWTR",
+      "price": 1200,
+      "previousPrice": 1200,
+      "exchange": "NASDAQ",
+      "favorite": false
+    },
+    {
+      "id": "l456",
+      "name": "Snap",
+      "code": "SNAP",
+      "price": 1300,
+      "previousPrice": 1300,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "m789",
+      "name": "Spotify",
+      "code": "SPOT",
+      "price": 1400,
+      "previousPrice": 1400,
+      "exchange": "NASDAQ",
+      "favorite": false
+    },
+    {
+      "id": "n012",
+      "name": "Uber",
+      "code": "UBER",
+      "price": 1500,
+      "previousPrice": 1500,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "o345",
+      "name": "Lyft",
+      "code": "LYFT",
+      "price": 1600,
+      "previousPrice": 1600,
+      "exchange": "NASDAQ",
+      "favorite": false
+    },
+    {
+      "id": "p678",
+      "name": "Pinterest",
+      "code": "PINS",
+      "price": 1700,
+      "previousPrice": 1700,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "q901",
+      "name": "Square",
+      "code": "SQ",
+      "price": 1800,
+      "previousPrice": 1800,
+      "exchange": "NASDAQ",
+      "favorite": false
+    },
+    {
+      "id": "r234",
+      "name": "DoorDash",
+      "code": "DASH",
+      "price": 1900,
+      "previousPrice": 1900,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "s567",
+      "name": "Robinhood",
+      "code": "HOOD",
+      "price": 2000,
+      "previousPrice": 2000,
+      "exchange": "NASDAQ",
+      "favorite": false
+    }
+    ,
+    {
+      "id": "t890",
+      "name": "Zoom",
+      "code": "ZM",
+      "price": 2100,
+      "previousPrice": 2100,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "u123",
+      "name": "Slack",
+      "code": "WORK",
+      "price": 2200,
+      "previousPrice": 2200,
+      "exchange": "NASDAQ",
+      "favorite": false
+    }
+    ,
+    {
+      "id": "v456",
+      "name": "Atlassian",
+      "code": "TEAM",
+      "price": 2300,
+      "previousPrice": 2300,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "w789",
+      "name": "Shopify",
+      "code": "SHOP",
+      "price": 2400,
+      "previousPrice": 2400,
+      "exchange": "NASDAQ",
+      "favorite": false
+    }
+    ,
+    {
+      "id": "x012",
+      "name": "Twilio",
+      "code": "TWLO",
+      "price": 2500,
+      "previousPrice": 2500,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "y345",
+      "name": "Datadog",
+      "code": "DDOG",
+      "price": 2600,
+      "previousPrice": 2600,
+      "exchange": "NASDAQ",
+      "favorite": false
+    }
+    ,
+    {
+      "id": "z678",
+      "name": "Snowflake",
+      "code": "SNOW",
+      "price": 2700,
+      "previousPrice": 2700,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "a901",
+      "name": "Palantir",
+      "code": "PLTR",
+      "price": 2800,
+      "previousPrice": 2800,
+      "exchange": "NASDAQ",
+      "favorite": false
+    }
+    ,
+    {
+      "id": "b234",
+      "name": "CrowdStrike",
+      "code": "CRWD",
+      "price": 2900,
+      "previousPrice": 2900,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "c567",
+      "name": "Okta",
+      "code": "OKTA",
+      "price": 3000,
+      "previousPrice": 3000,
+      "exchange": "NASDAQ",
+      "favorite": false
+    }
+    ,
+    {
+      "id": "d890",
+      "name": "Zscaler",
+      "code": "ZS",
+      "price": 3100,
+      "previousPrice": 3100,
+      "exchange": "NASDAQ",
+      "favorite": true
+    },
+    {
+      "id": "e123",
+      "name": "Elastic",
+      "code": "ESTC",
+      "price": 3200,
+      "previousPrice": 3200,
+      "exchange": "NASDAQ",
+      "favorite": false
     }
   ]
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./create-stock.css";
-
+import stockService from "~/services/stock-service";
 const initialForm = {
   name: "",
   code: "",
@@ -48,17 +48,12 @@ const CreateStockDialog = ({ onClose }) => {
       };
 
       try {
-        const response = await fetch("http://localhost:3005/stocks", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(newStock),
-        });
-        const data = await response.json();
-        console.log("Cổ phiếu đã được tạo:", data);
+        await stockService.addStock(newStock);
+        window.dispatchEvent(new CustomEvent("stockCreated"));
         setForm(initialForm);
         setErrors({});
         setSubmitted(false);
-        onClose(); // Đóng dialog sau khi tạo
+        onClose();
       } catch (err) {
         console.error("Lỗi khi tạo cổ phiếu:", err);
       }
@@ -67,7 +62,7 @@ const CreateStockDialog = ({ onClose }) => {
 
   const loadStockFromServer = () => {
     const stockFromServer = {
-      name: "loadStockFromServer Worked",
+      name: "TEST",
       code: "VNM",
       price: 80000,
       exchange: "HOSE",

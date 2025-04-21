@@ -14,6 +14,17 @@ function StockList() {
   useEffect(() => {
     loadStocks();
   }, []);
+  useEffect(() => {
+    const onStockCreated = () => {
+      loadStocks();
+    };
+
+    window.addEventListener("stockCreated", onStockCreated);
+
+    return () => {
+      window.removeEventListener("stockCreated", onStockCreated);
+    };
+  }, []);
 
   const loadStocks = () => {
     stockService.getStocks().then((res) => setStocks(res.data));
